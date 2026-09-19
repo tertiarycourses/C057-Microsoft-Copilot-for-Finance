@@ -1,42 +1,35 @@
-# Agentic AI for Finance — Hands-On Labs
+# Labs - Microsoft Copilot for Finance
 
-9 labs across 4 topics · 2 days · 15 instructional hours
+Course: C057
 
-Work through the labs in order — each one builds on the artifacts you produced in the labs before it.
+All 12 labs use one synthetic Northstar Finance scenario and build on each other: the report you verify in Lab 2 becomes the deck in Lab 3, the site you build in Lab 7 grounds the agent in Lab 8, and the specialists you publish in Lab 11 are orchestrated by a supervisor.
 
+Detailed step-by-step procedures are in the Learner Guide. Each lab folder holds a starter workbook, a solution workbook, a README and an evidence checklist.
 
-## Topic 1 — Getting Started with Agentic AI for Finance
+## Before you start
 
-| # | Lab | Tools | You Build |
-|---|-----|-------|-----------|
-| 1 | [Design the Finance Agent Charter and Prompt Contract](lab-01-design-the-finance-agent-charter-and-prompt-contract.md) | Spreadsheet · text editor · approved AI assistant · agent-use-case-register.csv · data-dictionary.csv | 01-foundation/finance-agent-charter.md, tool-risk-register.csv, prompt-contract.md and run-evidence/L01-tabletop-run.md for a read-only June close-report agent. |
-| 2 | [Connect and Profile Approved Financial Data](lab-02-connect-and-profile-approved-financial-data.md) | Spreadsheet · text editor · approved AI assistant · cash-ledger.csv · bank-statement.csv · budget-actual.csv | 01-foundation/source-manifest.csv, data-contracts.md, data-quality-report.md, approved-source-package.md and run-evidence/L02-grounding-test.md. |
+- Read [TENANT-RESOURCES.md](TENANT-RESOURCES.md) for your sign-in accounts, the SharePoint site, the Power Platform environment and the agent links. Your trainer will give you the passwords.
+- All finance data is synthetic. Never substitute live customer, payroll or account data.
+- Every artefact reconciles to net profit **SGD 4,767,259.38** for H1 FY2026. If your numbers disagree, something is wrong.
 
-## Topic 2 — Automating Financial Workflows with AI Agents
+## Shared data
 
-| # | Lab | Tools | You Build |
-|---|-----|-------|-----------|
-| 3 | [Build the Reconciliation and Close-Reporting Agent](lab-03-build-the-reconciliation-and-close-reporting-agent.md) | Spreadsheet · text editor · approved AI assistant · CASH_LEDGER_JUN · BANK_JUN · BUDGET_ACTUAL_JUN | 02-automation/reconciliation-june.csv, exception-queue.csv, adjusted-balance-proof.md, june-close-brief.md and run-evidence/L03-reconciliation-run.md. |
-| 4 | [Build the Driver-Based Forecasting Agent](lab-04-build-the-driver-based-forecasting-agent.md) | Spreadsheet · text editor · approved AI assistant · historical-monthly.csv · forecast-drivers.csv | 02-automation/forecast-assumptions.csv, scenario-forecast.csv, forecast-challenge.md, forecast-pack.md and run-evidence/L04-forecast-run.md. |
-| 5 | [Design the Invoice Exception and Human-Review Agent](lab-05-design-the-invoice-exception-and-human-review-agent.md) | Spreadsheet · text editor · approved AI assistant · invoice-register.csv · Lab 1 tool-risk register | 02-automation/invoice-routing.csv, invoice-exception-queue.csv, human-gate-matrix.csv, invoice-agent-instructions.md and run-evidence/L05-invoice-run.md. |
+- `_data/` - the finance dataset as CSV (general ledger, P&L, forecast, sales, collections, bank, chart of accounts)
+- `_knowledge/` - the four approved finance policies the agents are grounded on
+- `_reports/` - the five period finance reports the agents retrieve
+- `control-totals.json` in `_data/` - the figures every lab must reconcile to
 
-## Topic 3 — Analysis and Insights with AI Agents
+## The labs
 
-| # | Lab | Tools | You Build |
-|---|-----|-------|-----------|
-| 6 | [Build the Verified Financial Analysis Agent](lab-06-build-the-verified-financial-analysis-agent.md) | Spreadsheet · text editor · approved AI assistant · historical-monthly.csv · budget-actual.csv · Lab 3 close proof | 03-analysis/metric-contracts.csv, verified-analysis.csv, insight-evidence-chain.md, finance-analysis-brief.md and run-evidence/L06-analysis-run.md. |
-| 7 | [Build the Scenario Insight and Visualisation Agent](lab-07-build-the-scenario-insight-and-visualisation-agent.md) | Spreadsheet with chart capability · text editor · approved AI assistant · Lab 4 forecast · Lab 6 verified analysis | 03-analysis/scenario-summary.csv, scenario-risk-register.csv, scenario-insights.md, scenario-chart.xlsx or equivalent spreadsheet, chart-specification.md and run-evidence/L07-scenario-run.md. |
-
-## Topic 4 — Deploying and Governing Financial AI Agents
-
-| # | Lab | Tools | You Build |
-|---|-----|-------|-----------|
-| 8 | [Build the Finance Agent Governance and Evidence Pack](lab-08-build-the-finance-agent-governance-and-evidence-pack.md) | Spreadsheet · text editor · approved AI assistant · Labs 1–7 artifacts · governance-reference.csv · agent-inventory-starter.csv · access-control-starter.csv · control-evidence-starter.csv · run-evidence-schema-starter.md · incident-runbook-starter.md | 04-governance/agent-inventory.csv, access-control-matrix.csv, control-evidence-matrix.csv, run-evidence-schema.md, incident-runbook.md and run-evidence/L08-governance-review.md. |
-| 9 | [Evaluate, Monitor and Deploy the Finance Agent Portfolio](lab-09-evaluate-monitor-and-deploy-the-finance-agent-portfolio.md) | Spreadsheet · text editor · approved AI assistant · eval-cases.csv · eval-decision-tables.md · eval-oracle.csv · monitoring-scorecard-starter.csv · deployment-plan-template.md · rollback-runbook-starter.md · integrated-demo-template.md · Labs 1–8 artifacts | 04-governance/evaluation-results.csv, monitoring-scorecard.md, deployment-plan.md, rollback-runbook.md, integrated-demo.md and run-evidence/L09-release-decision.md. |
-
----
-
-> Use only the supplied synthetic Northstar Components data or information you are authorised to process. Do not paste credentials, personal data, customer records or confidential financial information into an unapproved AI service. A named finance owner verifies every material figure, classification and action.
-
-
-_Tertiary Infotech Academy Pte Ltd · C057 · v1.0 (29 July 2026)_
+- [Lab 1: Compare Generative, Agentic and Agent AI for Finance](lab-01-compare-generative-agentic-and-agent-ai-for-finance/README.md) - K2 · A1
+- [Lab 2: Draft a Financial Report with Copilot in Word](lab-02-draft-a-financial-report-with-copilot-in-word/README.md) - K2 · A1
+- [Lab 3: Build a Financial Presentation and an M365 Finance Agent](lab-03-build-a-financial-presentation-and-an-m365-finance-agent/README.md) - K2 · A1
+- [Lab 4: Prepare Finance Data for Copilot in Excel](lab-04-prepare-finance-data-for-copilot-in-excel/README.md) - K1 · A2
+- [Lab 5: Analyse Variances and Build a Dashboard with Copilot](lab-05-analyse-variances-and-build-a-dashboard-with-copilot/README.md) - K1 · A2
+- [Lab 6: Reconcile Accounts and Forecast with Copilot](lab-06-reconcile-accounts-and-forecast-with-copilot/README.md) - K1 · A2
+- [Lab 7: Build the Finance SharePoint Site and Load Finance Data](lab-07-build-the-finance-sharepoint-site-and-load-finance-data/README.md) - K1 · A3
+- [Lab 8: Ground a Finance Agent and Test Its Refusals](lab-08-ground-a-finance-agent-and-test-its-refusals/README.md) - K1 · A3
+- [Lab 9: Create the Environment and a Finance Agent Flow](lab-09-create-the-environment-and-a-finance-agent-flow/README.md) - A3
+- [Lab 10: Add a Human Approval Gate to a Finance Workflow](lab-10-add-a-human-approval-gate-to-a-finance-workflow/README.md) - A3
+- [Lab 11: Orchestrate a Multi-Agent Month-End Close](lab-11-orchestrate-a-multi-agent-month-end-close/README.md) - K4 · A3
+- [Lab 12: Secure a Finance Agent for PDPA and Human Oversight](lab-12-secure-a-finance-agent-for-pdpa-and-human-oversight/README.md) - K3 · A4 · A5
